@@ -1,8 +1,0 @@
-A stack do projeto é PHP (Laravel) monolítico com inertia (vue.js), e MySQL como SGBD;
-As chaves estrangeiras vou colocar no padrão PHP (name_id);
-Alguns relacionamentos foram mudados, pois o MySQL não suporta array de chaves estrangeiras (tive que fazer um relacionamento muitos para muitos, em alguns casos), logo, se existia uma coluna "projects" ou "collaborators", agora ela é uma coluna "project_id" ou "collaborator_id" (com um relacionamento);
-As colunas "positions" e "subscription" da tabela "projects" foram alteradas, respectivamente, para "max_collaborators" e "is_subscription";
-Estou supondo que a coluna "coordinator" é uma chave estrangeira que está relacionada com um usuário (pelo 'id');
-Estou supondo que nem todos os usuários irão ter número de matrícula (deixei a coluna scholarship como nullable);
-Não identifiquei botões de inserção ou atualização de registro, logo, fiz apenas um sistema para consultas (exceto pelos usuários, que serão criados pelo adm);
-Não irei colocar a 'occupacion' do usuário, no lugar, coloquei uma 'role' no 'allocation';
